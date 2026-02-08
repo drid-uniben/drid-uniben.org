@@ -58,7 +58,7 @@ jobs:
     - name: Check if the commenter is assigned to the issue
       run: |
         COMMENTER="${{ github.event.comment.user.login }}"
-        echo issue.json
+        cat issue.json | jq
         echo "Eng issue display;"
         ASSIGNED=$(jq --arg user "$COMMENTER" '.assignees[]?.login | select(. == $user)' issue.json)
         if [ -z "$ASSIGNED" ]; then
