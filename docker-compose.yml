@@ -1,0 +1,17 @@
+services:
+  web:
+    image: node:20-alpine
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+    volumes:
+      - .:/app
+      - next_node_modules:/app/node_modules
+    command: sh -c "corepack enable && pnpm install && pnpm dev"
+    restart: unless-stopped
+
+volumes:
+  next_node_modules:
