@@ -42,7 +42,7 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="mx-auto max-w-6xl px-6 pt-24 pb-24 lg:px-10 lg:pt-32 lg:pb-32"
+        className="mx-auto max-w-6xl px-5 pt-14 pb-14 lg:px-10 lg:pt-20 lg:pb-20"
       >
         <motion.p variants={fade} className="eyebrow text-gold-bright">
           Directorate of Research, Innovation &amp; Development · University of
