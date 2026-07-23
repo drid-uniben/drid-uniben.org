@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ReactDOM from "react-dom";
 import { Fraunces, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
@@ -52,6 +53,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Eagerly fetch the hero background (used as a CSS background-image, so it
+  // can't take <Image priority>). A high-priority preload removes the browser's
+  // default late/lazy discovery of the CSS url() and pulls it into the head.
+  ReactDOM.preload("/hero-bg.webp", {
+    as: "image",
+    fetchPriority: "high",
+  });
+
   return (
     <html lang="en">
       <body className={`${fraunces.variable} ${hanken.variable} antialiased`}>

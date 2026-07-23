@@ -68,7 +68,7 @@
   }
 
   /* Hero surface: brand gradient with an optional generated image on
-     top. If /hero-bg.jpg is absent, the gradient alone still reads. */
+     top. If /hero-bg.webp is absent, the gradient alone still reads. */
   .hero-surface {
     background-color: var(--color-plum-900);
     background-image:
@@ -78,7 +78,7 @@
         rgba(109, 3, 92, 0.86) 45%,
         rgba(142, 22, 111, 0.72) 100%
       ),
-      url("/hero-bg.jpg");
+      url("/hero-bg.webp");
     background-size: cover;
     background-position: center;
   }
