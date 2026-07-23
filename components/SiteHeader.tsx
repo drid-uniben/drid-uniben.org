@@ -10,7 +10,7 @@ import { OFFICIAL_SITE } from "@/lib/site";
 export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-rule bg-paper/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-3 lg:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 lg:px-10">
         <Link href="/" aria-label="DRID — University of Benin home">
           <Image
             src="/logo-header.png"
@@ -18,7 +18,7 @@ export default function SiteHeader() {
             width={853}
             height={293}
             priority
-            className="h-12 w-auto sm:h-[54px]"
+            className="h-14 w-auto sm:h-16"
           />
         </Link>
 
