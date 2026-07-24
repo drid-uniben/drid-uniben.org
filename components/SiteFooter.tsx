@@ -17,6 +17,13 @@ export default function SiteFooter() {
             <p className="mt-3 text-sm leading-relaxed text-paper/60">
               University of Benin, Benin City, Edo State, Nigeria.
             </p>
+            <a
+              href="mailto:drid@uniben.edu"
+              className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-paper/80 transition-colors hover:text-gold-bright"
+            >
+              drid@uniben.edu
+              <ArrowUpRight className="h-3.5 w-3.5 text-gold" />
+            </a>
           </div>
 
           <nav className="flex flex-col gap-2 text-sm md:items-end">
